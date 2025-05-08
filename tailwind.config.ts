@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our deployment dashboard
+				blue: {
+					light: '#63B3ED',
+					DEFAULT: '#3182CE',
+					dark: '#2C5282',
+				},
+				green: {
+					light: '#68D391',
+					DEFAULT: '#38A169',
+					dark: '#2F855A',
+				},
+				teal: {
+					light: '#4FD1C5',
+					DEFAULT: '#38B2AC',
+					dark: '#285E61',
+				},
+				navy: {
+					light: '#4C51BF',
+					DEFAULT: '#3C366B',
+					dark: '#2A2842',
 				}
 			},
 			borderRadius: {
@@ -84,11 +106,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'pulse-light': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-in-out',
+				'pulse-light': 'pulse-light 2s infinite'
 			}
 		}
 	},
